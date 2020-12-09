@@ -1,3 +1,18 @@
 # Copula Theory {#copula}
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Copula_(probability_theory)), a copula is _a multivariate cumulative distribution function for which the marginal probability distribution of each variable is uniform on the interval $[0, 1]$_.
+
+Let $(X_1, X_2)$ be a bivariate random vector with continuous marginal distributions; this implies that the marginal cumulative distribution functions [CDFs] $F_i(x_i) = P(X_i \le x_i)$ are continuous functions as well.
+
+By applying the probability integral transform, the random vector $(U_1, U_2) = (F(X_1), F(X_2))$ has marginals that are uniform on the interval $[0, 1]$: this corresponds to the definition of copula that was introduced above.
+
+Therefore, the copula $C$ of $(X_1, X_2)$ is defined as the joint CDF of $(U_1, U_2)$:
+$$
+C(u_1, u_2) = P(U_1 \le u_1, U_2 \le u_2)
+$$
+
+More formally, $C: [0, 1]^d \rightarrow [0, 1]$ is a $d-$dimensional copula if $C$ is a joint CDF of a $d-$dimensional vector on the unit (hyper-)cube $[0, 1]^d$ with uniform marginals.
+
+Sklar's theorem [@Sklar_1959] states that...
+
+Theory on Archimedean copulae in Chapter \@ref(archimedean).
