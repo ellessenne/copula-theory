@@ -4,3 +4,6 @@
 # RStudio files
 .Rproj.user/
 .Rproj.user
+# Compiled bookdown files
+_book/
+_bookdown_files/
