@@ -12,3 +12,5 @@ description: "A small book on copula theory"
 
 This short `bookdown` book covers basic principles of copulae.
 I will focus on bivariate copulae (e.g. for bivariate distributions), but most theory outlined here generalises to any number of dimensions.
+
+# Introduction {#introduction}
