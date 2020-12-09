@@ -1,3 +1,8 @@
 introduction
 copula
 archimedean
+ali-mikhail-haq-copula
+clayton-copula
+frank-copula
+gumbel-copula
+joe-copula
