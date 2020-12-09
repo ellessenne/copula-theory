@@ -1,4 +1,4 @@
---- 
+---
 title: "Copula Theory"
 author: "Alessandro Gasparini"
 date: "`r Sys.Date()`"
@@ -10,4 +10,5 @@ link-citations: yes
 description: "A small book on copula theory"
 ---
 
-# Introduction {#intro}
+This short `bookdown` book covers basic principles of copulae.
+I will focus on bivariate copulae (e.g. for bivariate distributions), but most theory outlined here generalises to any number of dimensions.
