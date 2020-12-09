@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Copula Theory</title>
+  <title>2 Copula Theory | Copula Theory</title>
   <meta name="description" content="A small book on copula theory" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Copula Theory" />
+  <meta property="og:title" content="2 Copula Theory | Copula Theory" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Copula Theory" />
+  <meta name="twitter:title" content="2 Copula Theory | Copula Theory" />
   
   <meta name="twitter:description" content="A small book on copula theory" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="archimedean.html"/>
-
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="archimedean.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -89,13 +89,24 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="copula" class="section level1">
+<h1><span class="header-section-number">2</span> Copula Theory</h1>
+<p>According to <a href="https://en.wikipedia.org/wiki/Copula_(probability_theory)">Wikipedia</a>, a copula is <em>a multivariate cumulative distribution function for which the marginal probability distribution of each variable is uniform on the interval <span class="math inline">\([0, 1]\)</span></em>.</p>
+<p>Let <span class="math inline">\((X_1, X_2)\)</span> be a bivariate random vector with continuous marginal distributions; this implies that the marginal cumulative distribution functions [CDFs] <span class="math inline">\(F_i(x_i) = P(X_i \le x_i)\)</span> are continuous functions as well.</p>
+<p>By applying the probability integral transform, the random vector <span class="math inline">\((U_1, U_2) = (F(X_1), F(X_2))\)</span> has marginals that are uniform on the interval <span class="math inline">\([0, 1]\)</span>: this corresponds to the definition of copula that was introduced above.</p>
+<p>Therefore, the copula <span class="math inline">\(C\)</span> of <span class="math inline">\((X_1, X_2)\)</span> is defined as the joint CDF of <span class="math inline">\((U_1, U_2)\)</span>:
+<span class="math display">\[
+C(u_1, u_2) = P(U_1 \le u_1, U_2 \le u_2)
+\]</span></p>
+<p>More formally, <span class="math inline">\(C: [0, 1]^d \rightarrow [0, 1]\)</span> is a <span class="math inline">\(d-\)</span>dimensional copula if <span class="math inline">\(C\)</span> is a joint CDF of a <span class="math inline">\(d-\)</span>dimensional vector on the unit (hyper-)cube <span class="math inline">\([0, 1]^d\)</span> with uniform marginals.</p>
+<p>Sklar’s theorem <span class="citation">(Sklar <a href="#ref-Sklar_1959" role="doc-biblioref">1959</a>)</span> states that…</p>
+<p>Theory on Archimedean copulae in Chapter <a href="archimedean.html#archimedean">3</a>.</p>
 
-<div id="refs" class="references">
-<div>
-<p>Sklar, A. 1959. “Fonctions de Répartition à N Dimensions et Leurs Marges.” <em>Publications de L’Institut de Statistique de L’Université de Paris</em> 8: 229–31.</p>
 </div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Sklar_1959">
+<p>Sklar, A. 1959. “Fonctions de Répartition à N Dimensions et Leurs Marges.” <em>Publications de L’Institut de Statistique de L’Université de Paris</em> 8: 229–31.</p>
 </div>
 </div>
             </section>
@@ -103,8 +114,8 @@
           </div>
         </div>
       </div>
-<a href="archimedean.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="archimedean.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
