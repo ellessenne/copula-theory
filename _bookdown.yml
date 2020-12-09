@@ -1,5 +1,2 @@
 book_filename: "copula-theory"
 delete_merged_file: true
-language:
-  ui:
-    chapter_name: "Chapter "
