@@ -1,3 +1,26 @@
 # Archimedean Copulae {#archimedean}
 
 Here is a review of existing methods.
+Need to double-check an actual book or some other literature on archimedean copulae, especially when it comes to domain of the association parameter $\theta$.
+
+## Ali-Mikhail-Haq Copula
+
+$\theta \in [0, 1)$
+
+## Clayton Copula
+
+$\theta \in (0, \infty)$.
+For dimension $d = 2$, $\theta \in (-1, \infty)$ is admissible.
+
+## Frank Copula
+
+$\theta \in (-\infty, +\infty)$
+
+## Gumbel Copula
+
+$\theta \in [1, \infty)$
+
+
+## Joe Copula
+
+$\theta \in [1, \infty)$
