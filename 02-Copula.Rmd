@@ -1,16 +1,85 @@
-# Copula Theory {#theory}
+# Copulae Theory {#theory}
 
-Let $(X_1, X_2)$ be a bivariate random vector with continuous marginal distributions; this implies that the marginal cumulative distribution functions [CDFs] $F_i(x_i) = P(X_i \le x_i)$ are continuous functions as well.
+Notation used in this Chapter is based on the book by Nelsen [@Nelsen_2006].
 
-By applying the probability integral transform, the random vector $(U_1, U_2) = (F(X_1), F(X_2))$ has marginals that are uniform on the interval $[0, 1]$: this corresponds to the definition of copula that was introduced above.
+First, let's define a distribution function: a _distribution function_ is a function $F$ with domain $\mathbf{R}$ such that
 
-Therefore, the copula $C$ of $(X_1, X_2)$ is defined as the joint CDF of $(U_1, U_2)$:
+* $F$ is non-decreasing;
+
+* $F(-\infty) = 0$ and $F(+\infty) = 1$.
+
+For a continuous random variable $X$, its distribution function is defined as $F_X(x) = P(X \le x)$.
+
+Analogously, a _joint distribution function_ is a function $H$ with domain $\mathbf{R}^2$ such that
+
+* $H$ is 2-increasing;
+
+* $H(x, -\infty) = H(-\infty, y) = 0$ and $F(+\infty, +\infty) = 1$.
+
+It can be showed that $H$ has margins $F(x) = H(x, +\infty)$ and $G(y) = H(+\infty, y)$.
+
+Formally, a two-dimensional copula is a function $C$ with the following properties:
+
+* The domain of $C$ is $\mathbf{I}^2$;
+
+* For every $u$, $v$ in $\mathbf{I}$:
+  $$
+  C(u, 0) = 0 = C(0, v)
+  $$
+  and
+  $$
+  C(u, 1) = u, \ C(1, v) = v
+  $$
+
+* For every $u_1$, $u_2$, $v_1$, $v_2$ in $\mathbf{I}$ such that $u_1 \le u_2$, $v_1 \le v_2$:
+  $$
+  C(u_2, v_2) - C(u_2, v_1) - C(u_1, v_2) + C(u_1, v_1) \ge 0
+  $$
+
+$C(u, v)$ can be thought of as an assignment of a number in $\mathbf{I}$ to the rectangle $[0, u] \times [0, v]$.
+
+Finally, partial derivatives of a copula exist for any $u$, $v$ in $\mathbf{I}$ and for _almost_ all $v$, $u$ (respectively) such that:
 $$
-C(u_1, u_2) = P(U_1 \le u_1, U_2 \le u_2)
+0 \le \frac{\partial C(u, v)}{\partial u} \le 1
+$$
+$$
+0 \le \frac{\partial C(u, v)}{\partial v} \le 1
+$$
+The existence of the partial derivatives is immediate because monotone, continuous functions (the margins e.g. $F$, $G$) are differentiable almost everywhere.
+
+## Sklar's Theorem {#theory-sklar-theorem}
+
+The fundamental theorem underlying copulae theory is _Sklar's theorem_ [@Sklar_1959].
+
+Let $H$ be a joint distribution function with margins $F$ and $G$.
+Then, there exists a copula function $C$ such that for all $x$, $y$ in $\mathbf{R}$:
+$$
+H(x, y) = C(F(x), G(y))
+$$
+If $F$ and $G$ are continuous, then $C$ is unique; otherwise, $C$ is uniquely determined on $\text{Ran} F \times \text{Ran} G$ (or either, when only one of the two is not continuous).
+
+Conversely, if $C$ is a copula and $F$ and $G$ are distribution functions, then $H$ (as defined above) is a joint distribution function with margins $F$ and $G$.
+
+Finally, Sklar's theorem still holds when $X$ and $Y$ are random variables.
+If $X$ and $Y$ are random variables with distribution functions $F_X$ and $G_Y$, there exists a copula function $C$ such that the joint distribution $H_{X,Y}$ is uniquely determined (when $X$ and $Y$ are continuous) by $C_{X,Y}(F_X, G_Y)$:
+$$
+H_{X, Y} = C_{X, Y}(F_X, G_Y)
+$$
+If $X$ and $Y$ are discrete random variables, once again, $C$ is defined on $\text{Ran} X \times \text{Ran} Y$.
+
+
+## Product Copula {#theory-product-copula}
+
+The product copula is defined as $\Pi(u, v) = u v$.
+This always applies when the two marginal distributions are independent:
+$$
+H(x, y) = \Pi(F_X(x), G_Y(y)) = F_X(x) G_Y(y) \leftrightarrow X \perp Y
 $$
 
-More formally, $C: [0, 1]^d \rightarrow [0, 1]$ is a $d-$dimensional copula if $C$ is a joint CDF of a $d-$dimensional vector on the unit (hyper-)cube $[0, 1]^d$ with uniform marginals.
+## Fréchet-Hoeffding Bounds {#theory-frechet-bounds}
 
-Sklar's theorem [@Sklar_1959] states that...
-
-Theory on Archimedean copulae in Chapter \@ref(archimedean).
+For every copula $C$ and every $(u, v)$ in $\mathbf{I}^2$, it can be showed that
+$$
+W(u, v) \le C(u, v) \le M(u, v)
+$$
+where $W(u, v) = \max(u + v - 1, 0)$ and $M(u, v) = \min(u, v)$ are commonly referred to as the _Fréchet-Hoeffding lower_ and _upper bound_, respectively.
