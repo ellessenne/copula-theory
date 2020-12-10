@@ -1,5 +1,5 @@
 ---
-title: "Copula Theory"
+title: "Copulae Theory"
 author: "Alessandro Gasparini"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,10 +7,12 @@ documentclass: book
 bibliography: bibliography.bib
 biblio-style: unsrt
 link-citations: yes
-description: "A small book on copula theory"
+description: "A Short Book on Copulae Theory"
 ---
 
-This short `bookdown` book covers basic principles of copulae.
-I will focus on bivariate copulae (e.g. for bivariate distributions), but most theory outlined here generalises to any number of dimensions.
-
 # Introduction {#introduction}
+
+Copulae are commonly referred to as _functions that join or couple multivariate distribution functions to their one-dimensional marginal distribution functions_; a formal definition of copula functions is introduced in Chapter \@ref(theory).
+
+This short `bookdown` book covers basic principles of copulae, Archimedean copulae, and estimation methods (focussing on full maximum likelihood estimation).
+Throughout this document I will focus on bivariate copulae (i.e. for bivariate outcomes), but most (if not all) of the theory outlined here generalises to any number of dimensions.

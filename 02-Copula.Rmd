@@ -1,6 +1,4 @@
-# Copula Theory {#copula}
-
-According to [Wikipedia](https://en.wikipedia.org/wiki/Copula_(probability_theory)), a copula is _a multivariate cumulative distribution function for which the marginal probability distribution of each variable is uniform on the interval $[0, 1]$_.
+# Copula Theory {#theory}
 
 Let $(X_1, X_2)$ be a bivariate random vector with continuous marginal distributions; this implies that the marginal cumulative distribution functions [CDFs] $F_i(x_i) = P(X_i \le x_i)$ are continuous functions as well.
 
