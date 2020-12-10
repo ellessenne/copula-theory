@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Copula Theory</title>
-  <meta name="description" content="A small book on copula theory" />
+  <title>Copulae Theory</title>
+  <meta name="description" content="A Short Book on Copulae Theory" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Copula Theory" />
+  <meta property="og:title" content="Copulae Theory" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="A small book on copula theory" />
+  <meta property="og:description" content="A Short Book on Copulae Theory" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Copula Theory" />
+  <meta name="twitter:title" content="Copulae Theory" />
   
-  <meta name="twitter:description" content="A small book on copula theory" />
+  <meta name="twitter:description" content="A Short Book on Copulae Theory" />
   
 
 <meta name="author" content="Alessandro Gasparini" />
 
 
-<meta name="date" content="2020-12-09" />
+<meta name="date" content="2020-12-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="copula.html"/>
+<link rel="next" href="theory.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -69,7 +69,11 @@
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="copula.html"><a href="copula.html"><i class="fa fa-check"></i><b>2</b> Copula Theory</a></li>
+<li class="chapter" data-level="2" data-path="theory.html"><a href="theory.html"><i class="fa fa-check"></i><b>2</b> Copulae Theory</a><ul>
+<li class="chapter" data-level="2.1" data-path="theory.html"><a href="theory.html#theory-sklar-theorem"><i class="fa fa-check"></i><b>2.1</b> Sklar’s Theorem</a></li>
+<li class="chapter" data-level="2.2" data-path="theory.html"><a href="theory.html#theory-product-copula"><i class="fa fa-check"></i><b>2.2</b> Product Copula</a></li>
+<li class="chapter" data-level="2.3" data-path="theory.html"><a href="theory.html#theory-frechet-bounds"><i class="fa fa-check"></i><b>2.3</b> Fréchet-Hoeffding Bounds</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="archimedean.html"><a href="archimedean.html"><i class="fa fa-check"></i><b>3</b> Archimedean Copulae</a><ul>
 <li class="chapter" data-level="3.1" data-path="archimedean.html"><a href="archimedean.html#ali-mikhail-haq-copula"><i class="fa fa-check"></i><b>3.1</b> Ali-Mikhail-Haq Copula</a></li>
 <li class="chapter" data-level="3.2" data-path="archimedean.html"><a href="archimedean.html#clayton-copula"><i class="fa fa-check"></i><b>3.2</b> Clayton Copula</a></li>
@@ -87,7 +91,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Copula Theory</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Copulae Theory</a>
           </h1>
         </div>
 
@@ -96,12 +100,15 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Copula Theory</h1>
+<h1 class="title">Copulae Theory</h1>
 <p class="author"><em>Alessandro Gasparini</em></p>
-<p class="date"><em>2020-12-09</em></p>
+<p class="date"><em>2020-12-10</em></p>
 </div>
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
+<p>Copulae are commonly referred to as <em>functions that join or couple multivariate distribution functions to their one-dimensional marginal distribution functions</em>; a formal definition of copula functions is introduced in Chapter <a href="theory.html#theory">2</a>.</p>
+<p>This short <code>bookdown</code> book covers basic principles of copulae, Archimedean copulae, and estimation methods (focussing on full maximum likelihood estimation).
+Throughout this document I will focus on bivariate copulae (i.e. for bivariate outcomes), but most (if not all) of the theory outlined here generalises to any number of dimensions.</p>
 
 </div>
             </section>
@@ -110,7 +117,7 @@
         </div>
       </div>
 
-<a href="copula.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="theory.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

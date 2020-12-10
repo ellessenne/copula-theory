@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Copulae Theory | Copulae Theory</title>
+  <meta name="description" content="A Short Book on Copulae Theory" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Copulae Theory | Copulae Theory" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A Short Book on Copulae Theory" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Copulae Theory | Copulae Theory" />
+  
+  <meta name="twitter:description" content="A Short Book on Copulae Theory" />
+  
+
+<meta name="author" content="Alessandro Gasparini" />
+
+
+<meta name="date" content="2020-12-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="archimedean.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="theory.html"><a href="theory.html"><i class="fa fa-check"></i><b>2</b> Copulae Theory</a><ul>
+<li class="chapter" data-level="2.1" data-path="theory.html"><a href="theory.html#theory-sklar-theorem"><i class="fa fa-check"></i><b>2.1</b> Sklar’s Theorem</a></li>
+<li class="chapter" data-level="2.2" data-path="theory.html"><a href="theory.html#theory-product-copula"><i class="fa fa-check"></i><b>2.2</b> Product Copula</a></li>
+<li class="chapter" data-level="2.3" data-path="theory.html"><a href="theory.html#theory-frechet-bounds"><i class="fa fa-check"></i><b>2.3</b> Fréchet-Hoeffding Bounds</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="archimedean.html"><a href="archimedean.html"><i class="fa fa-check"></i><b>3</b> Archimedean Copulae</a><ul>
+<li class="chapter" data-level="3.1" data-path="archimedean.html"><a href="archimedean.html#ali-mikhail-haq-copula"><i class="fa fa-check"></i><b>3.1</b> Ali-Mikhail-Haq Copula</a></li>
+<li class="chapter" data-level="3.2" data-path="archimedean.html"><a href="archimedean.html#clayton-copula"><i class="fa fa-check"></i><b>3.2</b> Clayton Copula</a></li>
+<li class="chapter" data-level="3.3" data-path="archimedean.html"><a href="archimedean.html#frank-copula"><i class="fa fa-check"></i><b>3.3</b> Frank Copula</a></li>
+<li class="chapter" data-level="3.4" data-path="archimedean.html"><a href="archimedean.html#gumbel-copula"><i class="fa fa-check"></i><b>3.4</b> Gumbel Copula</a></li>
+<li class="chapter" data-level="3.5" data-path="archimedean.html"><a href="archimedean.html#joe-copula"><i class="fa fa-check"></i><b>3.5</b> Joe Copula</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Copulae Theory</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="theory" class="section level1">
+<h1><span class="header-section-number">2</span> Copulae Theory</h1>
+<p>Notation used in this Chapter is based on the book by Nelsen <span class="citation">(Nelsen <a href="#ref-Nelsen_2006" role="doc-biblioref">2006</a>)</span>.</p>
+<p>First, let’s define a distribution function: a <em>distribution function</em> is a function <span class="math inline">\(F\)</span> with domain <span class="math inline">\(\mathbf{R}\)</span> such that</p>
+<ul>
+<li><p><span class="math inline">\(F\)</span> is non-decreasing;</p></li>
+<li><p><span class="math inline">\(F(-\infty) = 0\)</span> and <span class="math inline">\(F(+\infty) = 1\)</span>.</p></li>
+</ul>
+<p>For a continuous random variable <span class="math inline">\(X\)</span>, its distribution function is defined as <span class="math inline">\(F_X(x) = P(X \le x)\)</span>.</p>
+<p>Analogously, a <em>joint distribution function</em> is a function <span class="math inline">\(H\)</span> with domain <span class="math inline">\(\mathbf{R}^2\)</span> such that</p>
+<ul>
+<li><p><span class="math inline">\(H\)</span> is 2-increasing;</p></li>
+<li><p><span class="math inline">\(H(x, -\infty) = H(-\infty, y) = 0\)</span> and <span class="math inline">\(F(+\infty, +\infty) = 1\)</span>.</p></li>
+</ul>
+<p>It can be showed that <span class="math inline">\(H\)</span> has margins <span class="math inline">\(F(x) = H(x, +\infty)\)</span> and <span class="math inline">\(G(y) = H(+\infty, y)\)</span>.</p>
+<p>Formally, a two-dimensional copula is a function <span class="math inline">\(C\)</span> with the following properties:</p>
+<ul>
+<li><p>The domain of <span class="math inline">\(C\)</span> is <span class="math inline">\(\mathbf{I}^2\)</span>;</p></li>
+<li><p>For every <span class="math inline">\(u\)</span>, <span class="math inline">\(v\)</span> in <span class="math inline">\(\mathbf{I}\)</span>:
+<span class="math display">\[
+C(u, 0) = 0 = C(0, v)
+\]</span>
+and
+<span class="math display">\[
+C(u, 1) = u, \ C(1, v) = v
+\]</span></p></li>
+<li><p>For every <span class="math inline">\(u_1\)</span>, <span class="math inline">\(u_2\)</span>, <span class="math inline">\(v_1\)</span>, <span class="math inline">\(v_2\)</span> in <span class="math inline">\(\mathbf{I}\)</span> such that <span class="math inline">\(u_1 \le u_2\)</span>, <span class="math inline">\(v_1 \le v_2\)</span>:
+<span class="math display">\[
+C(u_2, v_2) - C(u_2, v_1) - C(u_1, v_2) + C(u_1, v_1) \ge 0
+\]</span></p></li>
+</ul>
+<p><span class="math inline">\(C(u, v)\)</span> can be thought of as an assignment of a number in <span class="math inline">\(\mathbf{I}\)</span> to the rectangle <span class="math inline">\([0, u] \times [0, v]\)</span>.</p>
+<p>Finally, partial derivatives of a copula exist for any <span class="math inline">\(u\)</span>, <span class="math inline">\(v\)</span> in <span class="math inline">\(\mathbf{I}\)</span> and for <em>almost</em> all <span class="math inline">\(v\)</span>, <span class="math inline">\(u\)</span> (respectively) such that:
+<span class="math display">\[
+0 \le \frac{\partial C(u, v)}{\partial u} \le 1
+\]</span>
+<span class="math display">\[
+0 \le \frac{\partial C(u, v)}{\partial v} \le 1
+\]</span>
+The existence of the partial derivatives is immediate because monotone, continuous functions (the margins e.g. <span class="math inline">\(F\)</span>, <span class="math inline">\(G\)</span>) are differentiable almost everywhere.</p>
+<div id="theory-sklar-theorem" class="section level2">
+<h2><span class="header-section-number">2.1</span> Sklar’s Theorem</h2>
+<p>The fundamental theorem underlying copulae theory is <em>Sklar’s theorem</em> <span class="citation">(Sklar <a href="#ref-Sklar_1959" role="doc-biblioref">1959</a>)</span>.</p>
+<p>Let <span class="math inline">\(H\)</span> be a joint distribution function with margins <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span>.
+Then, there exists a copula function <span class="math inline">\(C\)</span> such that for all <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span> in <span class="math inline">\(\mathbf{R}\)</span>:
+<span class="math display">\[
+H(x, y) = C(F(x), G(y))
+\]</span>
+If <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> are continuous, then <span class="math inline">\(C\)</span> is unique; otherwise, <span class="math inline">\(C\)</span> is uniquely determined on <span class="math inline">\(\text{Ran} F \times \text{Ran} G\)</span> (or either, when only one of the two is not continuous).</p>
+<p>Conversely, if <span class="math inline">\(C\)</span> is a copula and <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> are distribution functions, then <span class="math inline">\(H\)</span> (as defined above) is a joint distribution function with margins <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span>.</p>
+<p>Finally, Sklar’s theorem still holds when <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables.
+If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are random variables with distribution functions <span class="math inline">\(F_X\)</span> and <span class="math inline">\(G_Y\)</span>, there exists a copula function <span class="math inline">\(C\)</span> such that the joint distribution <span class="math inline">\(H_{X,Y}\)</span> is uniquely determined (when <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are continuous) by <span class="math inline">\(C_{X,Y}(F_X, G_Y)\)</span>:
+<span class="math display">\[
+H_{X, Y} = C_{X, Y}(F_X, G_Y)
+\]</span>
+If <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are discrete random variables, once again, <span class="math inline">\(C\)</span> is defined on <span class="math inline">\(\text{Ran} X \times \text{Ran} Y\)</span>.</p>
+</div>
+<div id="theory-product-copula" class="section level2">
+<h2><span class="header-section-number">2.2</span> Product Copula</h2>
+<p>The product copula is defined as <span class="math inline">\(\Pi(u, v) = u v\)</span>.
+This always applies when the two marginal distributions are independent:
+<span class="math display">\[
+H(x, y) = \Pi(F_X(x), G_Y(y)) = F_X(x) G_Y(y) \leftrightarrow X \perp Y
+\]</span></p>
+</div>
+<div id="theory-frechet-bounds" class="section level2">
+<h2><span class="header-section-number">2.3</span> Fréchet-Hoeffding Bounds</h2>
+<p>For every copula <span class="math inline">\(C\)</span> and every <span class="math inline">\((u, v)\)</span> in <span class="math inline">\(\mathbf{I}^2\)</span>, it can be showed that
+<span class="math display">\[
+W(u, v) \le C(u, v) \le M(u, v)
+\]</span>
+where <span class="math inline">\(W(u, v) = \max(u + v - 1, 0)\)</span> and <span class="math inline">\(M(u, v) = \min(u, v)\)</span> are commonly referred to as the <em>Fréchet-Hoeffding lower</em> and <em>upper bound</em>, respectively.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Nelsen_2006">
+<p>Nelsen, Roger B. 2006. <em>An Introduction to Copulas</em>. Springer-Verlag New York. <a href="https://doi.org/10.1007/0-387-28678-0">https://doi.org/10.1007/0-387-28678-0</a>.</p>
+</div>
+<div id="ref-Sklar_1959">
+<p>Sklar, A. 1959. “Fonctions de Répartition à N Dimensions et Leurs Marges.” <em>Publications de L’Institut de Statistique de L’Université de Paris</em> 8: 229–31.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="archimedean.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["copula-theory.pdf", "copula-theory.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

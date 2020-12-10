@@ -1,5 +1,8 @@
 introduction
-copula
+theory
+theory-sklar-theorem
+theory-product-copula
+theory-frechet-bounds
 archimedean
 ali-mikhail-haq-copula
 clayton-copula
